@@ -1,0 +1,20 @@
+# 配置文件的":"和对应的值一定要有空格
+
+server:
+  port: 1234
+
+spring:
+  # datasource config
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/justblog?characterEncoding=utf8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      idle-timeout: 60000
+      maximum-pool-size: 30
+      minimum-idle: 10
+
+# mybatis config
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
