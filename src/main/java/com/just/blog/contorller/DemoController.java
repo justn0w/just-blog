@@ -27,12 +27,21 @@ public class DemoController {
     }
 
     @GetMapping("/user")
-    public ModelAndView  user(@RequestParam("id") Integer id) {
+    public ModelAndView user(@RequestParam("id") Integer id) {
         ModelAndView mv = new ModelAndView("user");
         User user = userService.queryUserById(id);
         mv.addObject("user", user);
         return mv;
     }
 
+    @GetMapping("/index2")
+    public String index2() {
+        return "index2";
+    }
+
+    @GetMapping("/index3")
+    public String index3() {
+        return "index3";
+    }
 
 }

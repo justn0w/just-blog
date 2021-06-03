@@ -37,6 +37,13 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+        <!--实现热部署-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional> <!--不能被其他模块继承-->
+            <scope>runtime</scope> <!--只在运行的时候，起作用，打包的时候不起作用-->
+        </dependency>
     </dependencies>
 
     <build>

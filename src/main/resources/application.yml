@@ -1,7 +1,7 @@
 # 配置文件的":"和对应的值一定要有空格
 
 server:
-  port: 1234
+  port: 8088
 
 spring:
   # datasource config
@@ -14,6 +14,14 @@ spring:
       idle-timeout: 60000
       maximum-pool-size: 30
       minimum-idle: 10
+  # thymeleaf config
+  thymeleaf:
+    cache: false #shutdown cache
+  devtools:
+    restart:
+      enabled: true #设置开启热部署
+      additional-paths: src/main/java #重启目录
+      exclude: resources/** #静态页面保存回重新加载，应用不会重启
 
 # mybatis config
 mybatis:

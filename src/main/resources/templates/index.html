@@ -2,9 +2,52 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <style>
+        body {
+            background: #f6f6f6;
+        }
+        .layui-nav {
+            padding-left: 200px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(26,26,26,.1);
+        }
+        .layui-nav .layui-nav-item a {
+            font-size: 20px;
+            padding-left: 35px;
+            padding-right: 35px;
+            color: black;
+        }
+        .layui-nav .layui-this:after, .layui-nav-bar {
+            display: none;
+        }
+
+        .layui-nav .layui-nav-item a:hover, .layui-nav .layui-this a {
+            color: black;
+        }
+        li.layui-nav-item a:hover {
+            color: black;
+            background-color: #f6f6f6;
+        }
+    </style>
 </head>
 <body>
-    <p>test</p>
+
+<ul class="layui-nav" lay-filter="">
+    <li class="layui-nav-item"><a href="">技术</a></li>
+    <li class="layui-nav-item"><a href="">杂文</a></li>
+    <li class="layui-nav-item"><a href="">算法</a></li>
+    <li class="layui-nav-item"><a href="">探索</a></li>
+</ul>
+
+<img th:src="@{img/comment.png}" alt="">
+<script src="layui/layui.js"></script>
+<script>
+    layui.use('element', function () {
+        var element = layui.element;
+    })
+</script>
 </body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background: #f6f6f6;
+            margin: 0;
+        }
+
+        .nav {
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(26,26,26,.1);
+            margin: 0;
+            padding: 0;
+            border-radius: 2px;
+        }
+
+        .nav .nav-item {
+            position: relative;
+            display: inline-block;
+            list-style:none;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+
+        .nav .nav-item a {
+            text-decoration: none;
+            color: black;
+            padding: 0 35px 0 35px;
+            vertical-align: middle;
+        }
+
+        .nav .nav-item:hover {
+            color: black;
+            background-color: #f6f6f6;
+        }
+
+        .nav-item-img {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            margin: auto;
+            left:0;
+            top:0;
+            bottom:0;
+            right:0;
+            padding-right: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="nav-item"><img class="nav-item-img" th:src="@{img/hacker.png}" alt="" ></li>
+
+        <li class="nav-item" ><a href="">技术</a></li>
+        <li class="nav-item"><a href="">杂文</a></li>
+        <li class="nav-item"><a href="">算法</a></li>
+        <li class="nav-item"><a href="">探索</a></li>
+    </ul>
+</body>
+</html>
